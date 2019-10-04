@@ -1,0 +1,60 @@
+{
+	"name": "openfile",
+	"displayName": "Open File",
+	"description": "Open local file from a keybinding",
+	"version": "1.0.0",
+	"publisher": "usernamehw",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.30.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"open",
+		"file",
+		"keybinding"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/usernamehw/vscode-open-file"
+	},
+	"activationEvents": [
+		"onCommand:openFile"
+	],
+	"main": "./dist/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "openFile",
+				"title": "Open File"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "openFile",
+					"when": "never"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "webpack --mode production --colors",
+		"compile": "webpack --mode development",
+		"watch": "webpack --mode development --watch --display=minimal"
+	},
+	"devDependencies": {
+		"@types/node": "^10.14.20",
+		"@types/vscode": "^1.30.0",
+		"@typescript-eslint/eslint-plugin": "^2.3.2",
+		"@typescript-eslint/parser": "^2.3.2",
+		"eslint": "^6.5.1",
+		"friendly-errors-webpack-plugin": "^1.7.0",
+		"ts-loader": "^6.2.0",
+		"typescript": "^3.6.3",
+		"webpack": "^4.41.0",
+		"webpack-cli": "^3.3.9"
+	}
+}
