@@ -2,7 +2,7 @@
 	"name": "openfile",
 	"displayName": "Open File",
 	"description": "Open local file from a keybinding",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"publisher": "usernamehw",
 	"license": "MIT",
 	"engines": {
